@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "server": "vite build && node server",
+    "start": "vite build && node server",
     "build": "vite build"
   },
   "devDependencies": {
