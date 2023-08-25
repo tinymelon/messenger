@@ -44,6 +44,14 @@ b, strong {
   .vendor(user-select, none);
   -webkit-touch-callout: none;
 }
+.centered_content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
 
 /* loginBlock */
 .auth_from_wrapper {
@@ -57,10 +65,6 @@ b, strong {
   border-radius: 12px;
   background: #FFF;
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.14);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
   padding: 50px 30px 30px;
 }
 .auth_from_wrapper__title {
@@ -137,6 +141,7 @@ b, strong {
   outline: none;
   cursor: pointer;
   width: 100%;
+  max-width: 280px;
   height: 37px;
   padding: 12px;
   border-radius: 8px;
@@ -169,10 +174,6 @@ b, strong {
 
 /* errorPage */
 .error_page__wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -199,4 +200,143 @@ b, strong {
   text-decoration: none;
   margin-top: 70px;
   display: inline-block;
+}
+
+/* asideBackButton */
+.aside_back_button {
+  width: 64px;
+  height: 100%;
+  background: url("../static/arrow_left.svg") no-repeat center #FBFBFB;
+  display: block;
+  position: absolute;
+  z-index: 1;
+
+  &:hover {
+    background-color: darken(#FBFBFB, 10%);
+  }
+}
+
+/* profilePage */
+.profile__content_wrapper {
+  width: 100%;
+  max-width: 510px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile__avatar_wrapper {
+  width: 130px;
+  height: 130px;
+  background: url("../static/placeholder_image.svg") no-repeat center #EFEFEF;
+  border-radius: 100%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    &::before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: #000;
+      opacity: 0.5;
+      border-radius: 100%;
+    }
+    &::after {
+      content: 'Поменять аватар';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      color: #fff;
+      font-size: 13px;
+      text-align: center;
+      font-weight: 500;
+    }
+  }
+}
+.profile__name {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1;
+  margin-top: 21px;
+}
+.profile__form_wrapper {
+  width: 100%;
+  margin-top: 50px;
+}
+.profile_form_group {
+  position: relative;
+  width: 100%;
+
+  label {
+    font-size: 13px;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #EAEAEA;
+    padding: 10px 0;
+    color: #999;
+    text-align: right;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+    &:disabled {
+      background: inherit;
+    }
+    &:focus {
+      color: #1E1E1E;
+      border-bottom-color: @colorMain;
+    }
+  }
+
+  &:last-child {
+    input:not(:focus) {
+      border-bottom-color: transparent;
+    }
+  }
+}
+.profile__save_button {
+  margin-top: 50px;
+}
+
+/* profileActionsList */
+.profile_actions__wrapper {
+  width: 100%;
+  margin-top: 50px;
+}
+.profile_actions__action {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  padding: 10px 0;
+  border-bottom: 1px solid #EAEAEA;
+  color: @colorMain;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1;
+
+  &:last-child {
+    border-bottom: none;
+  }
+  &.red {
+    color: #F00;
+  }
 }
