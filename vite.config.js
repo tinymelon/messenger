@@ -10,4 +10,13 @@ export default defineConfig({
     plugins: [handlebars({
         partialDirectory: resolve(__dirname, 'src/partials')
     })],
+    css: {
+        preprocessorOptions: {
+            less: {
+                math: "always",
+                relativeUrls: true,
+                javascriptEnabled: true,
+            },
+        },
+    },
 })
