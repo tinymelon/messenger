@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start": "vite build && node server",
-    "build": "vite build"
+    "start": "vite build --emptyOutDir && node server",
+    "build": "vite build --emptyOutDir"
   },
   "engines": {
     "node": ">=18.17"
