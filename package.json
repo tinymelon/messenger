@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node server"
+    "server": "vite build && node server",
+    "build": "vite build"
   },
   "devDependencies": {
     "express": "^4.18.2",
