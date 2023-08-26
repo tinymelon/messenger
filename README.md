@@ -15,6 +15,8 @@ https://inquisitive-cucurucho-cc5a25.netlify.app/
 - https://inquisitive-cucurucho-cc5a25.netlify.app/profile_edit.html – экран редактирования профиля
 - https://inquisitive-cucurucho-cc5a25.netlify.app/profile_password.html – экран смены пароля
 - https://inquisitive-cucurucho-cc5a25.netlify.app/profile_popup.html – попап загрузки аватара
+- https://inquisitive-cucurucho-cc5a25.netlify.app/list.html – страница со списком чатов
+- https://inquisitive-cucurucho-cc5a25.netlify.app/list_active.html – страница с выбранным чатом
 - https://inquisitive-cucurucho-cc5a25.netlify.app/error404.html – страница с ошибкой 404
 - https://inquisitive-cucurucho-cc5a25.netlify.app/error500.html – страница с ошибкой 500
 
