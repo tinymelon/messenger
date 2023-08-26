@@ -9,8 +9,12 @@
     </style>
 </head>
 <body>
-    <div class="centered_content">
-        {{>loginPage}}
-    </div>
+    <aside>
+        {{>asideBackButton}}
+    </aside>
+    <main class="centered_content">
+        {{>profilePage}}
+    </main>
+    {{>popupWrapper visible='visible' boxPartial='popupAvatarUpload'}}
 </body>
 </html>

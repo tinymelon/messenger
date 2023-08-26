@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Messenger</title>
     <style lang="less">
-        @import "main.less";
+        @import "styles/main.less";
     </style>
 </head>
 <body>
-    {{>asideBackButton}}
-    <div class="centered_content">
+    <aside>
+        {{>asideBackButton}}
+    </aside>
+    <main class="centered_content">
         {{>profilePageEdit}}
-    </div>
+    </main>
 </body>
 </html>
