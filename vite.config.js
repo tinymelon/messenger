@@ -20,7 +20,10 @@ export default defineConfig({
     },
     appType: 'mpa',
     plugins: [handlebars({
-        partialDirectory: resolve(__dirname, 'src/partials')
+        partialDirectory: resolve(__dirname, 'src/partials'),
+        helpers: {
+            ifEquals: (arg1, arg2, options) => (arg1 == arg2 && arg1 != undefined) ? options.fn(this) : options.inverse(this),
+        }
     })],
     css: {
         preprocessorOptions: {
