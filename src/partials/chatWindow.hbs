@@ -13,16 +13,18 @@
         <div class="chat_window__messages">
             {{>chatBubble content='Привет! Есть что?' class='sent' time='23:47'}}
             {{>chatDate date='19 июня'}}
-            {{>chatBubble content='Привет! Смотри, тут всплыл интересный кусок крутой шапочки — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих шапочек все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.<br>Хассельблад в итоге адаптировал SWC для ношения на голове, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.' class='received' time='04:21'}}
+            {{>chatBubble content='Привет! Смотри, тут всплыл интересный кусок крутой шапочки — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих шапочек все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.<br><br>Хассельблад в итоге адаптировал SWC для ношения на голове, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.' class='received' time='04:21'}}
             {{!-- {{>chatBubble content='<img src="/static/camera.png" alt="">' class='received image' time='04:27'}} TODO fix image src --}}
             {{>chatBubble content='Круто!' class='sent' time='08:21'}}
             {{>chatBubble content='шапочка топ' class='sent' time='08:21'}}
         </div>
         <div class="chat_window__editor">
             <div class="chat_window__editor_add"></div>
-            {{>chatEditorAdd}}
-            <input type="text" class="chat_window__editor_input" placeholder="Сообщение">
-            <button class="chat_window__editor_send"></button>
+            <form action="#">
+                {{>chatEditorAdd}}
+                <input type="text" class="chat_window__editor_input" placeholder="Сообщение">
+                <button class="chat_window__editor_send"></button>
+            </form>
         </div>
     </div>
 {{^}}

@@ -1,7 +1,9 @@
 <div class="chats_list__wrapper">
     <div class="chats_list__head">
         <a href="/profile.html" class="chats_list__profile">Профиль</a>
-        <input type="text" class="chats_list__search" placeholder="Поиск" value="{{search}}">
+        <form action="/list_search.html">
+            <input type="text" class="chats_list__search" placeholder="Поиск" value="{{search}}" name="title">
+        </form>
     </div>
     <div class="chats_list__list">
         <!-- id=id title=title avatar=avatar(??last.message.user.avatar) unread=unread_count content=content time=time  -->
