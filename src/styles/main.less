@@ -10,11 +10,30 @@
   flex-direction: column;
   align-items: center;
 }
+.customScrollbar {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: dark;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 1px;
+    border: none;
+    background: #e0e0ea;
+  }
+  &::-webkit-scrollbar-thumb {
+    width: 6px;
+    border: none;
+    opacity: 1 !important;
+    background: #797980;
+    border-radius: 1px;
+  }
+}
 
 /* VARIABLES */
 @colorMain: #3369F3;
 @colorBlack: #1E1E1E;
-@base-url: "../../static/";
+@base-url: "../assets/images/";
 
 * {
   -webkit-locale: auto;
@@ -429,23 +448,7 @@ input.chats_list__search {
   flex-wrap: nowrap;
   align-items: flex-start;
   justify-content: flex-start;
-  overflow: auto;
-  scrollbar-width: thin;
-  scrollbar-color: dark;
-
-  &::-webkit-scrollbar {
-    width: 6px;
-    border-radius: 1px;
-    border: none;
-    background: #e0e0ea;
-  }
-  &::-webkit-scrollbar-thumb {
-    width: 6px;
-    border: none;
-    opacity: 1 !important;
-    background: #797980;
-    border-radius: 1px;
-  }
+  .customScrollbar;
 }
 
 /* chatListEntry */
@@ -537,6 +540,7 @@ input.chats_list__search {
   justify-content: space-between;
 }
 .chat_window__head {
+  height: 48px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -576,9 +580,11 @@ input.chats_list__search {
   }
 }
 .chat_window__messages {
+  height: calc(100% - 48px - 44px);
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  .customScrollbar;
 }
 .chat_window__bubble {
   padding: 11px;
@@ -598,10 +604,34 @@ input.chats_list__search {
     margin-right: 0;
     margin-left: auto;
   }
+  &.image {
+    border-radius: 10px;
+    padding: 0;
+    font-size: 0;
+  }
+  &.short {
+    padding-right: 63px;
+  }
 }
 .sent + .sent,
 .received + .received {
   margin-top: 10px;
+}
+.chat_window__bubble_time {
+  color: #999;
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 9px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+
+  .image & {
+    color: #FFF;
+    border-radius: 30px;
+    background: rgba(82, 82, 82, 0.50);
+    padding: 2px 7px;
+  }
 }
 .chat_window__date {
   color: #999;
@@ -619,6 +649,7 @@ input.chats_list__search {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
+  height: 44px;
 }
 .chat_window__editor_add {
   width: 32px;
