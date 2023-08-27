@@ -22,7 +22,7 @@ https://inquisitive-cucurucho-cc5a25.netlify.app/
 - https://inquisitive-cucurucho-cc5a25.netlify.app/error500.html – страница с ошибкой 500
 
 ### Макет
-Для вёрстки использовался макет от Яндекса, ссылка – https://www.figma.com/file/cwgeD98Q3YHHHRnhtN2WPT/Chat_external_link?type=design&node-id=12%3A54&mode=dev
+Для вёрстки использовался макет от Яндекса, ссылка – https://www.figma.com/file/cwgeD98Q3YHHHRnhtN2WPT/Chat_external_link
 
 ### Примечания
 Модульность пока минимальна, а именно – все шаблоны кучей лежат в partials, все стили отбиты комментариями в main.less 
